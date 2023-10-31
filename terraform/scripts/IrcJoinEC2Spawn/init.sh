@@ -7,9 +7,9 @@ import socket
 import time
 import random
 
-server = "irc.0xfdb.xyz"
-channel = "#main"
-nicknames = ["BadLarry", "BigSam", "rigaTony", "Fascilios", "Pennecio", "Tomateo"]
+server = "" #IRC SERVER
+channel = "" #CHANNEL
+nicknames = ["BadLarry", "BigSam", "rigaTony", "Fascilios", "Pennecio", "Tomateo"] #NICKLIST
 nick = random.choice(nicknames)
 
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

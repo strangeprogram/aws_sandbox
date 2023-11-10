@@ -1,8 +1,6 @@
-# AWS Playground: ELK Stack Deployment
+# AWS Sandbox
 
 This repository focuses on the integration and deployment of the ELK Stack (Elasticsearch, Logstash, and Kibana) using Terraform and Amazon Web Services (AWS). Intended as both a practical guide and comprehensive documentation, it details the entire process—from setup to deployment, while highlighting challenges and intricacies of integrating these technologies.
-
-While this project is experimental and not designed for production use, it offers invaluable insights and showcases best practices for ELK stack deployment on AWS.
 
 ## Table of Contents
 
@@ -33,15 +31,11 @@ First, install the AWS CLI and configure it with your credentials:
 sudo apt-get install -y awscli
 aws configure
 
-Should you encounter errors related to DEFAULT_CIPHERS, run:
-
-python -m pip install requests "urllib3<2"
-
 ## Terraform Installation
 
 Follow these steps to install Terraform:
 
-sudo apt-get install -y gnupg software-properties-common
-wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt-get update && sudo apt-get install -y terraform
+- sudo apt-get install -y gnupg software-properties-common
+- wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+- echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+- sudo apt-get update && sudo apt-get install -y terraform
